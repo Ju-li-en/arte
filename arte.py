@@ -31,7 +31,7 @@ class FenetreArte:
 
     def on_boutonArte_clicked(self, widget):
         print self.emission
-        system('youtube-dl -f HTTP_MP4_HQ_1 -o \'/home/julien/Vidéos/%(title)s-%(playlist)s-%(id)s.%(ext)s\' '+self.emission)
+        system('youtube-dl -f HTTP_MP4_HQ_1 -o \'/home/jciavaldini/Vidéos/%(title)s-%(playlist)s-%(id)s.%(ext)s\' '+self.emission)
 
     def createWidgets(self):
 
@@ -41,7 +41,7 @@ class FenetreArte:
         renderer_text.props.wrap_width = 300
         # renderer_text.props.wrap_mode = Gtk.WRAP_WORD
         try:
-            programme = fp.par0se('http://www.arte.tv/papi/tvguide-flow/feeds/videos/fr.xml?type=ARTE_PLUS_SEVEN')
+            programme = fp.parse('http://www.arte.tv/papi/tvguide-flow/feeds/videos/fr.xml?type=ARTE_PLUS_SEVEN')
         except:
             print "erreur chargement du flux"
         # print programme
