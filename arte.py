@@ -4,7 +4,7 @@
 import gi
 from gi.repository import Gtk
 import feedparser as fp
-from os import system
+from os import system, environ
 import threading
 
 class FenetreArte:
@@ -32,7 +32,7 @@ class FenetreArte:
     # permet de lancer plusieurs youtube-dl dans des threads
     def _on_boutonArte_clicked(self):
         print self.emission
-        system('youtube-dl -f HTTP_MP4_HQ_1 -o \'/home/jciavaldini/Vidéos/%(title)s-%(playlist)s-%(id)s.%(ext)s\' '+self.emission)
+        system('youtube-dl -f HTTP_MP4_HQ_1 -o '+environ['HOME']+'\'/Vidéos/%(title)s-%(playlist)s-%(id)s.%(ext)s\' '+self.emission)
 
     def on_boutonArte_clicked(self, widget):
         threading.Thread(target=self._on_boutonArte_clicked).start()
