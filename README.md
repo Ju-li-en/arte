@@ -1,5 +1,5 @@
 # arte
-Allow to download ARTE+7 programs from TreeView (pygtk) with filtering capabilities
+Allow to download ARTE+7 programs in a TreeView (pygtk) object
 
 Grabs information from RSS file from website
 
