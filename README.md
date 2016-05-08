@@ -6,4 +6,5 @@ Grabs information from RSS file from website
 # requirements
 This works on Fedora 22
 
-youtube-dl is installed
+youtube-dl should be installed
+Parsing library should also be installed for python
