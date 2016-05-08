@@ -29,9 +29,9 @@ class FenetreArte:
         if treeiter is not None:
             self.emission = model[treeiter][3]
 
-    # permet de lancer plusieurs youtube-dl dans des threads
+    # permet de lancer plusieurs youtube-dl dans des threads à l'aide des décorateurs
     def _on_boutonArte_clicked(self):
-        print self.emission
+        # print self.emission
         system('youtube-dl -f HTTP_MP4_HQ_1 -o '+environ['HOME']+'\'/Vidéos/%(title)s-%(playlist)s-%(id)s.%(ext)s\' '+self.emission)
 
     def on_boutonArte_clicked(self, widget):
